@@ -80,4 +80,26 @@ export class WalletService {
       walletsInfo: JSON.stringify(walletsInfo),
     });
   }
+
+  async getBalance(walletAddress: string) {
+    // Eth
+    const provider = new ethers.JsonRpcProvider(
+      'https://rpc-amoy.polygon.technology/',
+    );
+
+    const contract = new ethers.Contract(
+      Zar.contractAddress,
+      Zar.abi,
+      provider,
+    );
+
+    try {
+      return ethers.formatEther(await contract.balanceOf(walletAddress));
+    } catch (error) {
+      throw new HttpException(
+        'Error During Getting Balance',
+        HttpStatus.REQUEST_TIMEOUT,
+      );
+    }
+  }
 }
