@@ -50,6 +50,12 @@ BODY {
 That's it!
 Response contains information about generated wallet addresses.
 
+You can get balance of a wallet address as below:
+
+```bash
+GET http://localhost:3000/api/v1/wallet/getBalance/:walletAddress
+```
+
 ## Modify Somethings
 
 - Open `src/main.ts` file and write your **Domain Name or IP Address** on line 9.
