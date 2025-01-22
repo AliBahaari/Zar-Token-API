@@ -12,9 +12,7 @@ export class KeyEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column({
-    unique: true,
-  })
+  @Column()
   title: string;
 
   @Column({
