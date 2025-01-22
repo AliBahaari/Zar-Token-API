@@ -75,10 +75,10 @@ export class WalletService {
       },
     };
 
-    return await this.walletRepo.save({
+    return {
       fullName: createWalletDto.fullName,
       walletsInfo: JSON.stringify(walletsInfo),
-    });
+    };
   }
 
   async getBalance(walletAddress: string) {
