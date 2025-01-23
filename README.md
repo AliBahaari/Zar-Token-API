@@ -1,6 +1,6 @@
 ## Description
 
-Zar API
+Zar Token API
 
 ## Installation
 
