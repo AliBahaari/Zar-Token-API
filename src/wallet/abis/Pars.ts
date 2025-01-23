@@ -1,6 +1,6 @@
-export const Zar = {
-  contractName: 'Zar',
-  contractAddress: '0x90518B6F4EAe683Bb4CA0172EFB040083ab9e5B5',
+export const Pars = {
+  contractName: 'Pars',
+  contractAddress: '0x501b189384DFBE310B67232c96FBda68A6e9be0C',
   abi: [
     {
       inputs: [

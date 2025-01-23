@@ -1,6 +1,6 @@
-export const Zar = {
-  contractName: 'Zar',
-  contractAddress: '0x90518B6F4EAe683Bb4CA0172EFB040083ab9e5B5',
+export const ZKCoin = {
+  contractName: 'ZKCoin',
+  contractAddress: '0xaD32c249BD17C5D3E1de3f7c707F2a8d5b788851',
   abi: [
     {
       inputs: [
