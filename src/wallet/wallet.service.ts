@@ -73,13 +73,17 @@ export class WalletService {
     const privateKey =
       '0xb9c2dc8e60dd852edf63251bcfe3832bae302a22acb2a68c67c5732c28bda179';
     const wallet = new Wallet(privateKey, provider);
-    const contract = null;
+    let contract = null;
     if (mintWalletDto.type === 'Zar') {
-      new ethers.Contract(Zar.contractAddress, Zar.abi, wallet);
+      contract = new ethers.Contract(Zar.contractAddress, Zar.abi, wallet);
     } else if (mintWalletDto.type === 'ZKCoin') {
-      new ethers.Contract(ZKCoin.contractAddress, ZKCoin.abi, wallet);
+      contract = new ethers.Contract(
+        ZKCoin.contractAddress,
+        ZKCoin.abi,
+        wallet,
+      );
     } else if (mintWalletDto.type === 'Pars') {
-      new ethers.Contract(Pars.contractAddress, Pars.abi, wallet);
+      contract = new ethers.Contract(Pars.contractAddress, Pars.abi, wallet);
     }
 
     const successBlock = {
